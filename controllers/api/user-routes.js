@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Post, Comment } = require('../../models');
 
 // find all users
 router.get('/', (req, res) => {
@@ -22,6 +22,20 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
+        include: [
+            {
+                model: Post,
+                attributes: ['id', 'title', 'post_url']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text'],
+                include: {
+                    model: Post,
+                    attributes: ['title']
+                }
+            }
+        ]
     })
         .then(dbUserData => {
             if (!dbUserData) {
@@ -44,11 +58,40 @@ router.post('/', (req, res) => {
         password: req.body.password
     })
         .then(dbUserData => {
-            res.json(dbUserData);
+            req.session.save(() => {
+                req.session.user_id = dbUserData.id;
+                req.session.username = dbUserData.username;
+                req.session.loggedIn = true;
+
+                res.json(dbUserData);
+            });
         })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
+        });
+});
+
+router.post('/login', (req, res) => {
+    User.findOne({
+        where: {
+            email: req.body.email
+        }
+    })
+        .then(dbUserData => {
+            if (!dbUserData) {
+                res.status(400).json({ message: "No user found with that ID" });
+                return;
+            }
+            // validate password logic
+            // }
+            req.session.save(() => {
+                req.session.user_id = dbUserData.id;
+                req.session.username = dbUserData.username;
+                req.session.loggedIn = true;
+
+                res.json({ user: dbUserData, message: "You are logged in!" });
+            });
         });
 });
 
