@@ -3,7 +3,11 @@ const { Post, User } = require('../../models');
 const sequelize = require('../../config/connection');
 
 router.get('/', (req, res) => {
-    Post.findAll()
+    Post.findAll({
+        attributes: [
+            'title', 'created_at'
+        ],
+    })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
             console.log(err);
