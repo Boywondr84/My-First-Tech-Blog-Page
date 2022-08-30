@@ -1,10 +1,7 @@
 <ol class="post-list">
     {{#each posts as |post|}}
     <li>
-        <div class="title">
-            <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-            <span>({{post.post_url}})</span>
-        </div>
+        {{> post-info post}}
     </li>
     {{/each}}
 </ol>
