@@ -2,8 +2,15 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
 header h1 {
     text-align: center;
+    margin-bottom: 35px;
 }
 
 header h1 a {
@@ -12,11 +19,15 @@ header h1 a {
     font-size: 40px;
 }
 
+nav {
+    margin-bottom: 35px;
+}
+
 nav a {
     text-decoration: none;
     color: black;
     font-size: 27px;
-    padding: 35px 140px 55px 140px;
+    padding: 0 180px 0 180px;
 }
 
 /* login-form */
@@ -69,6 +80,17 @@ button:hover {
     margin-left: 15px;
     margin-bottom: 15px;
     width: 13%;
+}
+
+/* post info */
+
+.post a {
+    font-size: 24px;
+}
+
+.post span {
+    font-size: 20px;
+    font-style: italic;
 }
 
 /* .post-list {
