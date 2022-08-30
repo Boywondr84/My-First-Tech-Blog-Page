@@ -83,6 +83,9 @@ button:hover {
 }
 
 /* post info */
+.post {
+    text-decoration: none;
+}
 
 .post a {
     font-size: 24px;
@@ -93,6 +96,19 @@ button:hover {
     font-style: italic;
 }
 
-/* .post-list {
-    margin-left: 30px;
-} */
+.title {
+    padding-top: 15px;
+    margin-left: 28px;
+}
+
+.meta {
+    font-size: 22px;
+    margin-left: 45px;
+    padding-top: 20px;
+}
+
+.comments {
+    font-size: 19px;
+    margin-left: 68px;
+    padding-top: 10px;
+}
