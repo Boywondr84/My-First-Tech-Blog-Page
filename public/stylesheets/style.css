@@ -103,12 +103,94 @@ button:hover {
 
 .meta {
     font-size: 22px;
-    margin-left: 45px;
     padding-top: 20px;
+    margin-left: 6%;
+    margin-bottom: 29px;
+    color: rgb(85, 84, 84);
 }
 
 .comments {
     font-size: 19px;
     margin-left: 68px;
     padding-top: 10px;
+}
+
+h2 {
+    margin-left: 175px;
+}
+.edit-post-form input {
+    height: 40px;
+    width: 30%;
+}
+
+.edit-post-form div { 
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.edit-post-form button {
+    margin-bottom: 20px;
+    margin-right: 15px;
+    padding-right: 15px;
+}
+
+.delete-post-btn:hover {
+    background-color: rgba(255, 0, 0, 0.818);
+}
+
+.comment-form comment-body{
+    margin-bottom: 20px;
+}
+
+.comment-form button:hover {
+    background-color: yellow;
+}
+
+textarea {
+    height: 100px;
+    width: 30%;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+#dashboard {
+    color: rgb(68, 68, 208);
+    font-size: 21px;
+    margin-left: 316px;
+}
+
+ol {
+    margin-left: 14px;
+}
+
+.post {
+    margin-top: 30px;
+    margin-left: 4%;
+}
+
+.edit-link {
+    font-size: 24px;
+    margin-left: 131px;
+    color: rgb(89, 112, 139);
+}
+
+.new-post-form .post-title {
+    margin-left: 2%;
+    font-size: 20px;
+}
+
+.new-post-form .post-url {
+    margin-left: 2%;
+    font-size: 20px;
+}
+
+.new-post-form input {
+    height: 30px;
+    margin-bottom: 28px;
+    width: 30%;
+}
+
+#logout {
+    background-color: rgb(228, 150, 94);
 }
