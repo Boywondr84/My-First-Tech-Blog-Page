@@ -43,7 +43,8 @@ https://github.com/Boywondr84/My-First-Tech-Blog-Page
 https://my-first-tech-blog-site.herokuapp.com/
 
 # Screenshot:
-<img src='>
+<img src="./Screenshot Challenge 14.jpg"></img>
+
 # Contributions:
 Ryan Kahlbaugh
 
